@@ -4,8 +4,8 @@ const Hero = ({onOpenModal}) => {
     return (
         <div className="pt-2 md:pt-12 md:pb-24 md:px-[6%] bg-[#C0C0C0] md:bg-[#F9F9F9]">
             <div className="hidden md:flex flex-row gap-24 items-center">
-                <div className="flex flex-col gap-8 font-gilroy">
-                    <p className="text-6xl font-semibold uppercase text-[#47484A] leading-18">Верни <span
+                <div className="flex flex-col gap-8">
+                    <p className="text-6xl font-gilroy font-semibold uppercase text-[#47484A] leading-18">Верни <span
                         className="text-white bg-[#2968F6] rounded-xl px-4 leading-none">100% зрение</span> за 15 минут</p>
                     <div className="border-b-2 bg-[#D8D8D8]"></div>
                     <p className="text-2xl font-bold"><span className="text-[#2968F6]">Лазерная коррекция</span> зрения “Femto LASIK” — по суперцене <span className="text-[#2968F6]">410 000 тг</span> за оба глаза только <span className="text-[#2968F6]">до конца мая!</span></p>
@@ -15,9 +15,13 @@ const Hero = ({onOpenModal}) => {
                             className="rounded-xl bg-gradient-to-r from-[#3480D4] to-[#5056DC] cursor-pointer shadow-[0px_2px_10px_4px_rgba(101,170,243,0.5)] w-full py-3 shadow-[0px 2px 10px 4px #65AAF380]">
                             <p className="text-white font-bold text-2xl">Получить консультацию</p>
                         </button>
-                        <button className="w-[80%] rounded-xl border-2 cursor-pointer [border-image:linear-gradient(272.88deg,#5056DC_4.95%,#3480D4_93.62%)_1]">
-                            <p className="text-2xl bg-gradient-to-r from-[#3480D4] to-[#5056DC] bg-clip-text text-transparent">Смотреть отзывы</p>
-                        </button>
+                        <div className="w-[80%] rounded-xl p-[2px] bg-gradient-to-r from-[#5056DC] to-[#3480D4]">
+                            <button className="w-full rounded-[11px] bg-white py-3">
+                                <p className="text-2xl bg-gradient-to-r from-[#3480D4] to-[#5056DC] bg-clip-text text-transparent">
+                                    Смотреть отзывы
+                                </p>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <img src="/Hero1.svg" alt="Hero" />

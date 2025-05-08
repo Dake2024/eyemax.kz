@@ -1,22 +1,28 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Bebas Neue';
-  src: url('/fonts/BebasNeue-Regular.woff2') format('woff2'),
-  url('/fonts/BebasNeue-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Bebas Neue';
+    src: url('public/fonts/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Применяем шрифт только к элементам с классом font-bebas */
 .font-bebas {
-  font-family: 'Bebas Neue', sans-serif !important;
+    font-family: 'Bebas Neue', sans-serif !important;
 }
 
 .font-gilroy {
-  font-family: 'Gilroy', sans-serif;
+    font-family: 'Gilroy', sans-serif;
 }
 
 body {
-  @apply font-sans; /* Используем системный шрифт по умолчанию */
+    @apply font-sans;
+    /* Используем системный шрифт по умолчанию */
 }

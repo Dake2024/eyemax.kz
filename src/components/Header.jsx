@@ -5,7 +5,7 @@ export default function Header({onOpenModal}) {
 
     return (
         <header className="md:bg-white bg-[#C0C0C0] sticky top-0 z-50 md:rounded-[20px] md:shadow-[0_0_24px_0_rgba(238,238,229,0.1)]">
-            <div className="container mx-auto md:px-8 md:py-8 px-6 py-12 font-gilroy">
+            <div className="container mx-auto md:px-8 md:py-8 px-6 py-12">
                 <div className="flex justify-between items-center">
                     {/* Логотип */}
                     <div className="flex items-center">
@@ -24,8 +24,8 @@ export default function Header({onOpenModal}) {
                     </div>
 
                     {/* Десктопное меню (скрывается на мобильных) */}
-                    <nav className="hidden md:flex space-x-8 text-black text-[16px] font-medium">
-                        <a href="#about">
+                    <nav className="hidden md:flex space-x-8 text-black text-[16px] font-medium font-gilroy">
+                        <a href="#about" className="font-gilroy">
                             O нас
                         </a>
                         <a href="#steps">
@@ -44,7 +44,7 @@ export default function Header({onOpenModal}) {
 
                     <button
                         onClick={onOpenModal}
-                        className="hidden md:block bg-[#2968F6] text-white py-3 px-11 rounded-xl text-lg font-medium transition-colors cursor-pointer"
+                        className="hidden md:block bg-[#2968F6] font-gilroy text-white py-3 px-11 rounded-xl text-lg font-medium transition-colors cursor-pointer"
                     >
                         Записаться
                     </button>
