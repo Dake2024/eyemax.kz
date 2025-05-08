@@ -30,17 +30,17 @@ export default function WhyEyemax() {
     ];
 
     return (
-        <div className="relative md:pt-16">
+        <div id="about" className="relative md:pt-16">
             <img src="/Side2.svg" alt="Side" className="hidden md:block absolute right-0 -top-30" />
             <img src="/Side2.svg" alt="Side" className="block md:hidden absolute right-0 -top-30 w-32" />
             <section className="py-16 md:mb-8 bg-white px-[6%]">
                 <div className="container mx-auto w-full">
                     {/* Заголовок и подзаголовок */}
                     <div className="mb-8">
-                        <h1 className="text-4xl md:text-6xl font-bebas text-[#0E3D91] font-bold uppercase mb-2 md:mb-4">
+                        <h1 className="text-[40px] md:text-[64px] font-bebas text-[#0E3D91] font-bold uppercase mb-2 md:mb-4">
                             SMILE PRO
                         </h1>
-                        <p className="text-xl md:text-3xl text-black font-gilroy">
+                        <p className="text-xl md:text-4xl text-black font-gilroy">
                             Новейшая технология лазерной коррекции зрения
                         </p>
                     </div>
@@ -48,8 +48,8 @@ export default function WhyEyemax() {
                     {/* Карточки */}
                     <div className="flex md:flex-row flex-col gap-6 w-full mx-auto">
                         {/* Карточка 1 */}
-                        <div className="bg-[#FAFCFD] border-1 border-[#314F86] bg-opacity-10 rounded-2xl p-6 md:p-8 md:h-72 flex md:flex-col relative">
-                            <p className="text-xl md:text-4xl font-bold text-[#314F86] w-[75%] font-bebas">
+                        <div className="bg-[#FAFCFD] border-1 border-[#314F86] bg-opacity-10 rounded-2xl p-6 md:p-8 md:h-72 md:w-full flex md:flex-col relative">
+                            <p className="text-2xl md:text-5xl font-bold text-[#314F86] w-[75%] font-bebas">
                                 ПЕРЕДОВАЯ ЛАЗЕРНАЯ ТЕХНОЛОГИЯ
                             </p>
                             <img
@@ -60,8 +60,8 @@ export default function WhyEyemax() {
                         </div>
 
                         {/* Карточка 2 */}
-                        <div className="bg-[#FAFCFD] border-1 border-[#314F86] bg-opacity-10 rounded-2xl p-6 md:p-8 md:h-72 flex md:flex-col relative">
-                            <p className="text-xl md:text-4xl font-bold text-[#314F86] w-[75%] font-bebas">
+                        <div className="bg-[#FAFCFD] border-1 border-[#314F86] bg-opacity-10 rounded-2xl p-6 md:p-8 md:h-72 md:w-full flex md:flex-col relative">
+                            <p className="text-2xl md:text-5xl font-bold text-[#314F86] w-[75%] font-bebas">
                                 ПРОЦЕДУРА ДЛИТСЯ ВСЕГО 9 СЕКУНД!
                             </p>
                             <img
@@ -75,14 +75,14 @@ export default function WhyEyemax() {
             </section>
             <img src="/Side1.svg" alt="Side" className="hidden md:block absolute left-0 top-96" />
             <img src="/Side1.svg" alt="Side" className="block md:hidden absolute left-0 bottom-1/3 w-32" />
-            <section className="py-16 bg-white px-[6%]">
+            <section className=" pb-12 md:py-16 bg-white px-[6%]">
                 <div className="container mx-auto w-full">
                     {/* Заголовок секции */}
                     <div className="mb-8">
-                        <h2 className="text-4xl md:text-6xl font-bebas text-[#0E3D91] font-bold uppercase mb-2 md:mb-4">
+                        <h2 className="text-[40px] md:text-[64px] font-bebas text-[#0E3D91] font-bold uppercase mb-2 md:mb-4">
                             ПОЧЕМУ <span className="text-black">EYEMAX?</span>
                         </h2>
-                        <p className="text-xl md:text-3xl text-black font-gliroy">
+                        <p className="text-xl md:text-4xl text-black font-gilroy">
                             С нами это просто и безопасно
                         </p>
                     </div>
@@ -98,14 +98,14 @@ export default function WhyEyemax() {
                             >
                                 <div className="flex items-start gap-4 font-bebas">
                                     <div className="bg-white rounded-full py-3 px-4">
-                                        <p className="text-[#314F86] text-3xl font-bold leading-none">{benefit.id}</p>
+                                        <p className="text-[#314F86] text-[22px] md:text-[32px] font-bold leading-none">{benefit.id}</p>
                                     </div>
                                     <div>
-                                        <h3 className="text-lg md:text-2xl font-bold text-[#E4FF35]">
+                                        <h3 className="text-[21px] md:text-[32px] font-bold text-[#E4FF35]">
                                             {benefit.title}
                                         </h3>
                                         {benefit.description && (
-                                            <p className="text-white md:text-2xl font-bold">
+                                            <p className="text-white text-[21px] md:text-[32px] font-bold">
                                                 {benefit.description}
                                             </p>
                                         )}

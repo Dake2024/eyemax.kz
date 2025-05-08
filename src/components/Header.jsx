@@ -60,7 +60,7 @@ export default function Header({onOpenModal}) {
 
                 {/* Мобильное меню */}
                 {isMenuOpen && (
-                    <div className="md:hidden mt-8 pb-2 space-y-3 text-white text-[16px] font-medium">
+                    <div className="md:hidden mt-8 pb-2 space-y-3 text-white text-[16px] font-medium font-gilroy">
                         <a
                             href="#about"
                             className="block py-2"

@@ -29,15 +29,15 @@ export default function Announcement({onOpenModal}) {
     }, []);
 
     return (
-        <div className="flex flex-col gap-12 md:gap-16 items-center px-[6%]">
+        <div id="promo" className="flex flex-col gap-12 md:gap-16 items-center px-[6%]">
             {/* Заголовок */}
 
             <div className="hidden md:flex flex-row items-end gap-5">
                 <div className="w-[776px] relative">
-                    <h2 className="text-2xl md:text-5xl font-bold font-bebas mb-16 uppercase text-black">
+                    <h2 className="text-[40px] md:text-[64px] font-bold font-bebas mb-16 uppercase leading-none text-black">
                         УСПЕЙ ЗАПИСАТЬСЯ ДО <span className="text-[#0E3D91]">30 АПРЕЛЯ</span> И ПОЛУЧИ:
                     </h2>
-                    <img src="/Banner4.svg" alt="Banner" className="absolute -top-15 -right-20"/>
+                    <img src="/Banner4.svg" alt="Banner" className="absolute -top-10 -right-25"/>
                     {/* Блок 1 - Скидка */}
                     <img src="/Banner1.svg" alt="Banner"/>
                 </div>
@@ -51,11 +51,11 @@ export default function Announcement({onOpenModal}) {
             </div>
 
             <div className="flex flex-col gap-5 md:hidden relative">
-                <h2 className="w-2/3 text-4xl md:text-5xl font-bold font-bebas mb-8 uppercase text-black">
+                <h2 className="w-2/3 text-[40px] md:text-[64px] font-bold font-bebas mb-6 uppercase leading-none text-black">
                     УСПЕЙ ЗАПИСАТЬСЯ ДО <span className="text-[#0E3D91]">30 АПРЕЛЯ</span>
                 </h2>
-                <h2 className="w-2/3 text-3xl md:text-5xl font-bold mb-2 uppercase text-black font-bebas">И ПОЛУЧИ:</h2>
-                <img src="/Banner4.svg" alt="Banner" className="absolute top-20 right-[10%] w-32"/>
+                <h2 className="w-2/3 text-3xl md:text-5xl font-bold uppercase text-black font-bebas">И ПОЛУЧИ:</h2>
+                <img src="/Banner4.svg" alt="Banner" className="absolute top-5 right-[10%] w-32"/>
 
                 <img src="/Banner1.svg" alt="Banner"/>
 
@@ -66,29 +66,29 @@ export default function Announcement({onOpenModal}) {
 
             {/* Таймер */}
             <div>
-                <p className="text-center text-5xl font-bold font-bebas mb-8 hidden md:block">ОСТАЛОСЬ:</p>
-                <div className="flex gap-2 md:gap-8 text-white font-bebas font-bold">
+                <p className="text-center text-[40px] md:text-[64px] font-bold font-bebas mb-8 hidden md:block">ОСТАЛОСЬ:</p>
+                <div className="flex gap-2 md:gap-6 text-white font-bebas font-bold">
                     <div
-                        className="text-center bg-[#244D97] w-28 h-28 md:w-48 md:h-48 rounded-[20px] flex flex-col items-center justify-center">
-                        <div className="text-6xl md:text-8xl">{timeLeft.days}</div>
-                        <div className="text-3xl md:text-4xl uppercase">Дней</div>
+                        className="text-center bg-[#244D97] w-28 h-28 md:w-48 md:h-48 rounded-[20px] flex flex-col items-center justify-center leading-none">
+                        <div className="text-[64px] md:text-[140px]">{timeLeft.days}</div>
+                        <div className="text-[24px] md:text-[48px] uppercase">Дней</div>
                     </div>
                     <div
-                        className="text-center bg-[#244D97] w-28 h-28 md:w-48 md:h-48 rounded-[20px] flex flex-col items-center justify-center">
-                        <div className="text-6xl md:text-8xl font-bold">{timeLeft.hours}</div>
-                        <div className="text-3xl md:text-4xl uppercase">Часов</div>
+                        className="text-center bg-[#244D97] w-28 h-28 md:w-48 md:h-48 rounded-[20px] flex flex-col items-center justify-center leading-none">
+                        <div className="text-[64px] md:text-[140px] font-bold">{timeLeft.hours}</div>
+                        <div className="text-[24px] md:text-[48px] uppercase">Часов</div>
                     </div>
                     <div
-                        className="text-center bg-[#244D97] w-28 h-28 md:w-48 md:h-48 rounded-[20px] flex flex-col items-center justify-center">
-                        <div className="text-6xl md:text-8xl font-bold">{timeLeft.minutes}</div>
-                        <div className="text-3xl md:text-4xl uppercase">Минут</div>
+                        className="text-center bg-[#244D97] w-28 h-28 md:w-48 md:h-48 rounded-[20px] flex flex-col items-center justify-center leading-none">
+                        <div className="text-[64px] md:text-[140px] font-bold">{timeLeft.minutes}</div>
+                        <div className="text-[24px] md:text-[48px] uppercase">Минут</div>
                     </div>
                 </div>
             </div>
 
             <button
                 onClick={onOpenModal}
-                className="md:hidden w-max px-20 py-6 bg-gradient-to-r from-[#3480D4] to-[#5056DC] shadow-[0px_2px_10px_4px_rgba(101,170,243,0.5)] rounded-xl text-2xl text-white uppercase leading-none cursor-pointer">
+                className="md:hidden w-max px-20 py-6 bg-gradient-to-r from-[#3480D4] to-[#5056DC] shadow-[0px_2px_10px_4px_rgba(101,170,243,0.5)] rounded-xl text-[26px] font-bebas text-white uppercase leading-none cursor-pointer">
                 Записаться
             </button>
         </div>

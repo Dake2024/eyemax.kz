@@ -39,9 +39,9 @@ const ContactForm = () => {
             <div className="flex flex-col mt-6 md:mt-28 md:flex-row items-center justify-between bg-[#3889FC] rounded-xl py-12 px-8 md:py-12 md:px-16 mx-auto w-full relative">
                 {/* Левая часть: текст и изображение */}
                 <div className="flex items-center mb-6 md:mb-0">
-                    <div className="flex flex-col gap-3 md:gap-6">
-                        <h3 className="text-white text-2xl md:text-5xl font-bold uppercase font-bebas">Остались вопросы?</h3>
-                        <p className="text-[#AED9FF] text-lg md:text-3xl w-2/3 font-gilroy">Оставьте свои данные и мы свяжемся с вами</p>
+                    <div className="flex flex-col gap-4 md:gap-6">
+                        <h3 className="text-white text-[40px] md:text-[64px] font-bold uppercase font-bebas leading-none">Остались вопросы?</h3>
+                        <p className="text-[#AED9FF] text-[16px] md:text-[32px] w-2/3 font-gilroy">Оставьте свои данные и мы свяжемся с вами</p>
                     </div>
                     <img src="/Contacts1.svg" alt="Question Mark" className="absolute right-[37%] bottom-0 hidden md:block" />
                     <img src="/Contacts1.svg" alt="Question Mark" className="absolute right-0 top-[10%] block md:hidden w-48" />
@@ -74,7 +74,7 @@ const ContactForm = () => {
                     </div>
                     <button
                         onClick={handleSubmit}
-                        className="bg-black text-white py-4 px-4 rounded-lg font-semibold w-full text-lg hover:bg-gray-800 transition-colors"
+                        className="bg-black text-white py-4 px-4 rounded-lg font-semibold w-full text-xl font-gilroy hover:bg-gray-800 transition-colors"
                     >
                         Отправить
                     </button>

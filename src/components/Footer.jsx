@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="flex gap-5">
                 <div className="flex flex-col gap-6 md:gap-8 w-full rounded-xl border-2 border-[#D4E1F8] p-8 md:p-12 font-bebas">
                     {/* Заголовок */}
-                    <h2 className="text-3xl md:text-5xl text-black font-bold uppercase">
+                    <h2 className="text-[40px] md:text-[48px] text-black font-bold uppercase">
                         НАШИ <span className="text-[#0E3D91]">КОНТАКТЫ</span>
                     </h2>
 
@@ -18,7 +18,7 @@ export default function Footer() {
                         />
                         <a
                             href="tel:+77088008778"
-                            className="text-black text-3xl md:text-4xl leading-[110%] tracking-[0.01em] font-bebas hover:opacity-80 transition-opacity"
+                            className="text-black text-[32px] md:text-[40px] leading-[110%] tracking-[0.01em] font-bebas hover:opacity-80 transition-opacity"
                         >
                             +7 708 800 8778
                         </a>
@@ -50,7 +50,7 @@ export default function Footer() {
                 </div>
                 <div className="hidden md:flex flex-col gap-8 w-full mx-auto rounded-xl border-2 border-[#D4E1F8] p-12">
                     {/* Заголовок */}
-                    <h2 className="font-bebas text-4xl md:text-5xl text-black font-bold uppercase">
+                    <h2 className="font-bebas text-[40px] md:text-[48px] text-black font-bold uppercase">
                         НАШ <span className="text-[#0E3D91]">АДРЕС</span>
                     </h2>
 
