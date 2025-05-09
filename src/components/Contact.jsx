@@ -108,11 +108,11 @@ const ContactForm = () => {
                 {/* Левая часть: текст и изображение */}
                 <div className="flex items-center mb-6 md:mb-0 w-full md:w-[65%]">
                     <div className="flex flex-col gap-4 md:gap-6">
-                        <h3 className="text-white text-[40px] md:text-[64px] font-bold uppercase font-bebas leading-none">Остались вопросы?</h3>
+                        <h3 className="text-white text-[36px] md:text-[64px] font-bold uppercase font-bebas leading-none">Остались вопросы?</h3>
                         <p className="text-[#AED9FF] text-[16px] md:text-[32px] w-2/3 font-gilroy">Оставьте свои данные и мы свяжемся с вами</p>
                     </div>
                     <img src="/Contacts1.svg" alt="Question Mark" className="absolute right-[37%] bottom-0 hidden md:block" />
-                    <img src="/Contacts1.svg" alt="Question Mark" className="absolute right-0 top-[10%] block md:hidden w-48" />
+                    <img src="/Contacts1.svg" alt="Question Mark" className="absolute right-0 top-[15%] block md:hidden w-40" />
                 </div>
 
                 {/* Правая часть: форма */}

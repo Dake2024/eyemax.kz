@@ -47,8 +47,8 @@ const Reviews = () => {
     }, []); // Empty dependency array to run once on mount
 
     return (
-        <div id="reviews" className="py-0 md:py-16 mt-15 md:my-20 px-[6%]">
-            <div className="flex relative w-[75%]">
+        <div id="reviews" className="relative py-0 md:py-16 mt-15 md:my-20 px-[6%]">
+            <div className="flex w-[75%]">
                 <p className="text-[40px] md:text-[64px] font-bold font-bebas uppercase leading-none">
                     Что говорят <span className="text-[#0E3D91]">наши пациенты</span>
                 </p>
@@ -60,7 +60,7 @@ const Reviews = () => {
                 <img
                     src="/Review1.svg"
                     alt="Review"
-                    className="block md:hidden absolute -bottom-0 -right-20 w-32"
+                    className="block md:hidden absolute -top-20 right-0 w-26"
                 />
             </div>
             {/* Iframe for reviews widget */}
