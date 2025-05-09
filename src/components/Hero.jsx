@@ -66,7 +66,7 @@ const Hero = ({onOpenModal}) => {
             <img
                 src="/Eye.svg"
                 alt="Eye Animation"
-                className={`absolute top-[40%] left-[20%] z-10 md:hidden ${
+                className={`absolute top-[40%] left-[17%] z-10 md:hidden ${
                     showEye ? 'animate-eye' : 'hidden'
                 }`}
             />
