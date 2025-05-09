@@ -14,7 +14,7 @@ const Hero = ({onOpenModal}) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowEye(false);
-        }, 3000); // 2 seconds
+        }, 4000); // 2 seconds
         return () => clearTimeout(timer); // Cleanup timer on unmount
     }, []);
 
@@ -66,7 +66,7 @@ const Hero = ({onOpenModal}) => {
             <img
                 src="/Eye.svg"
                 alt="Eye Animation"
-                className={`absolute top-[30%] left-[20%] w-64 h-64 z-10 md:hidden ${
+                className={`absolute top-[40%] left-[20%] w-64 h-64 z-10 md:hidden ${
                     showEye ? 'animate-eye' : 'hidden'
                 }`}
             />
