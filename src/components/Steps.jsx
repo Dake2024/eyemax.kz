@@ -21,12 +21,12 @@ const Steps = () => {
                             <div className="flex flex-row justify-end md:justify-center">
                                 <div className="absolute -left-16 top-5 bg-[#0E3D91] w-8 h-1 md:w-20 md:h-2"></div>
                                 <div
-                                    className="flex-shrink-0 bg-[#0E3D91] text-white rounded-lg px-3 md:px-6 py-2 font-extrabold text-[20px] md:text-[32px]">
+                                    className="flex-shrink-0 bg-[#0E3D91] text-white rounded-lg px-3 md:px-6 py-2 font-bold text-[20px] md:text-[32px]">
                                     Шаг №1
                                 </div>
                             </div>
                             <div>
-                                <h3 className="max-[374px]:text-[18px] text-[22px] md:text-[40px] font-extrabold text-[#0E3D91] mb-2">
+                                <h3 className="max-[374px]:text-[18px] text-[22px] md:text-[40px] font-bold text-[#0E3D91] mb-2">
                                     Полная диагностика
                                 </h3>
                                 <p className="text-black max-[374px]:text-[14px] text-[18px] md:text-[26px] flex flex-col">
@@ -40,7 +40,7 @@ const Steps = () => {
                             <div className="flex flex-row justify-end md:justify-center">
                                 <div className="absolute -left-16 top-5 bg-[#0E3D91] w-8 h-1 md:w-20 md:h-2"></div>
                                 <div
-                                    className="flex-shrink-0 bg-[#0E3D91] text-white rounded-lg px-3 md:px-6 py-2 font-extrabold text-[20px] md:text-[32px]">
+                                    className="flex-shrink-0 bg-[#0E3D91] text-white rounded-lg px-3 md:px-6 py-2 font-bold text-[20px] md:text-[32px]">
                                     Шаг №2
                                 </div>
                             </div>
