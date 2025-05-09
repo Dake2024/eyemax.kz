@@ -9,7 +9,7 @@ export default function Header({onOpenModal}) {
                 <div className="flex justify-between items-center mx-auto md:px-8 md:py-8 px-6 py-12">
                     {/* Логотип */}
                     <div className="flex items-center">
-                        <a href="#" className="flex items-center">
+                        <a href="/" className="flex items-center">
                             <img
                                 src="/Logo1.svg"
                                 alt="EY3MAX Logo"
@@ -60,7 +60,7 @@ export default function Header({onOpenModal}) {
 
                 {/* Мобильное меню */}
                 {isMenuOpen && (
-                    <div className="md:hidden absolute w-full px-6 pb-3 space-y-3 text-white backdrop-blur-xs text-[16px] font-medium font-gilroy">
+                    <div className="md:hidden absolute w-full px-6 pb-3 space-y-3 text-white backdrop-blur-xl text-[16px] font-medium font-gilroy">
                         <a
                             href="#about"
                             className="block py-2"

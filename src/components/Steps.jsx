@@ -17,9 +17,9 @@ const Steps = () => {
 
                     <div className="pt-20 pl-16 relative">
                         {/* Шаг 1 */}
-                        <div className="relative flex items-start gap-8 mb-8">
-                            <div className="flex flex-row justify-center">
-                                <div className="absolute -left-16 top-5 bg-[#0E3D91] w-12 h-1 md:w-20 md:h-2"></div>
+                        <div className="relative flex flex-row items-start gap-3 md:gap-8 mb-8">
+                            <div className="flex flex-row justify-end md:justify-center">
+                                <div className="absolute -left-16 top-5 bg-[#0E3D91] w-8 h-1 md:w-20 md:h-2"></div>
                                 <div
                                     className="flex-shrink-0 bg-[#0E3D91] text-white rounded-lg px-3 md:px-6 py-2 font-extrabold text-[20px] md:text-[32px]">
                                     Шаг №1
@@ -36,9 +36,9 @@ const Steps = () => {
                         </div>
 
                         {/* Шаг 2 */}
-                        <div className="relative flex items-start gap-8 mb-8">
-                            <div className="flex flex-row justify-center">
-                                <div className="absolute -left-16 top-5 bg-[#0E3D91] w-12 h-1 md:w-20 md:h-2"></div>
+                        <div className="relative flex items-start gap-3 md:gap-8 mb-8">
+                            <div className="flex flex-row justify-end md:justify-center">
+                                <div className="absolute -left-16 top-5 bg-[#0E3D91] w-8 h-1 md:w-20 md:h-2"></div>
                                 <div
                                     className="flex-shrink-0 bg-[#0E3D91] text-white rounded-lg px-3 md:px-6 py-2 font-extrabold text-[20px] md:text-[32px]">
                                     Шаг №2
@@ -55,9 +55,9 @@ const Steps = () => {
                         </div>
 
                         {/* Шаг 3 */}
-                        <div className="relative flex items-start gap-8 mb-8">
-                            <div className="flex flex-row justify-center">
-                                <div className="absolute -left-16 top-5 bg-[#0E3D91] w-12 h-1 md:w-20 md:h-2"></div>
+                        <div className="relative flex items-start gap-3 md:gap-8 mb-8">
+                            <div className="flex flex-row justify-end md:justify-center">
+                                <div className="absolute -left-16 top-5 bg-[#0E3D91] w-8 h-1 md:w-20 md:h-2"></div>
                                 <div
                                     className="flex-shrink-0 bg-[#0E3D91] text-white rounded-lg px-3 md:px-6 py-2 font-extrabold text-[20px] md:text-[32px]">
                                     Шаг №3
@@ -75,10 +75,10 @@ const Steps = () => {
                         </div>
 
                         {/* Шаг 4 */}
-                        <div className="relative flex items-start gap-8">
-                            <div className="flex flex-row justify-center">
+                        <div className="relative flex items-start gap-3 md:gap-8">
+                            <div className="flex flex-row justify-end md:justify-center">
                                 <div
-                                    className="absolute -left-16 top-5 bg-[#0E3D91] w-12 h-1 md:w-20 md:h-2 rounded-3xl"></div>
+                                    className="absolute -left-16 top-5 bg-[#0E3D91] w-8 h-1 md:w-20 md:h-2 rounded-3xl"></div>
                                 <div
                                     className="flex-shrink-0 bg-[#0E3D91] text-white rounded-lg px-3 md:px-6 py-2 font-extrabold text-[20px] md:text-[32px]">
                                     Шаг №4
