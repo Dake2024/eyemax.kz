@@ -83,7 +83,7 @@ const ConsultationModal = ({ isOpen, onClose }) => {
         console.log('Отправляемые данные:', payload);
 
         try {
-            const response = await fetch('/api/lead', {
+            const response = await fetch('https://Dake2025.pythonanywhere.com/lead', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
