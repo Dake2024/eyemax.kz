@@ -27,14 +27,43 @@ const ConsultationModal = ({ isOpen, onClose }) => {
         setFormData(prev => ({ ...prev, phone: formattedValue }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const digitsOnly = formData.phone.replace(/\D/g, '');
         if (digitsOnly.length !== 11) {
             setError('Номер телефона должен содержать 10 цифр');
             return;
         }
-        console.log('Форма отправлена:', { name, phone: `+${digitsOnly}` });
+
+        const payload = {
+            name: formData.name,
+            phone: `+${digitsOnly}`,
+            service: formData.selectedService === 'femto-lasik' ? 'femto lasik' : 'smile pro'
+        };
+
+        console.log('Отправляемые данные:', payload); // Логирование данных
+
+        try {
+            const response = await fetch('https://Dake2025.pythonanywhere.com/lead', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
+
+            if (response.ok) {
+                console.log('Заявка успешно отправлена:', payload);
+                setError(''); // Очистка ошибок
+                onClose(); // Закрытие модального окна
+            } else {
+                const errorData = await response.json();
+                setError(errorData.message || 'Ошибка при отправке заявки');
+            }
+        } catch (error) {
+            console.error('Ошибка сети:', error);
+            setError('Ошибка сети. Пожалуйста, попробуйте еще раз.');
+        }
     };
 
     return (
@@ -59,6 +88,7 @@ const ConsultationModal = ({ isOpen, onClose }) => {
                             <img src="/user.svg" alt="user" className="h-4 w-4 md:h-6 md:w-6" />
                             <input
                                 type="text"
+                                name="name"
                                 placeholder="Имя"
                                 value={formData.name}
                                 onChange={handleChange}
