@@ -1,0 +1,29 @@
+/* Animation for the eye */
+@keyframes rotateAndSlide {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    80% {
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+}
+
+.animate-eye {
+    animation: rotateAndSlide 4s ease-in-out forwards;
+    transform-origin: center center; /* Ensure rotation happens around the center */
+}
+
+/* Blur effect for the background */
+.blur-sm {
+    filter: blur(6px);
+}
+
+.blur-none {
+    filter: blur(0);
+}
