@@ -38,7 +38,7 @@ const ContactForm = () => {
         <div className="px-[6%]">
             <div className="flex flex-col mt-6 md:mt-28 md:flex-row items-center justify-between bg-[#3889FC] rounded-xl py-12 px-8 md:py-12 md:px-16 mx-auto w-full relative">
                 {/* Левая часть: текст и изображение */}
-                <div className="flex items-center mb-6 md:mb-0">
+                <div className="flex items-center mb-6 md:mb-0 w-full md:w-[65%]">
                     <div className="flex flex-col gap-4 md:gap-6">
                         <h3 className="text-white text-[40px] md:text-[64px] font-bold uppercase font-bebas leading-none">Остались вопросы?</h3>
                         <p className="text-[#AED9FF] text-[16px] md:text-[32px] w-2/3 font-gilroy">Оставьте свои данные и мы свяжемся с вами</p>
