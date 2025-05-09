@@ -1,19 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Variants for FAQ answer animation
-const answerVariants = {
-    hidden: { opacity: 0, height: 0, overflow: "hidden" },
-    visible: {
-        opacity: 1,
-        height: "auto",
-        transition: {
-            duration: 0.4,
-            ease: "easeInOut"
-        }
-    }
-};
-
 const faqData = [
     {
         question: "Когда можно водить машину, пользоваться телефоном, смотреть ТВ?",
@@ -78,11 +65,12 @@ const FAQ = () => {
                             <AnimatePresence>
                                 {openIndex === index && (
                                     <motion.div
-                                        className="bg-[#69A7FB] overflow-hidden py-4 px-6 text-[18px] md:text-[24px] text-white font-gilroy rounded-b-xl break-words whitespace-pre-line"
-                                        variants={answerVariants}
-                                        initial="hidden"
-                                        animate="visible"
-                                        exit="hidden"
+                                        className="bg-[#69A7FB] py-4 px-6 text-[18px] md:text-[24px] text-white font-gilroy rounded-b-xl break-words whitespace-pre-line"
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: "auto" }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                                        style={{ overflow: "hidden" }}
                                         dangerouslySetInnerHTML={{ __html: faq.answer }}
                                     />
                                 )}
