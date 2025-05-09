@@ -4,8 +4,9 @@ const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
-        selectedService: 'femto-lasik'
+        selectedService: 'Консультация'
     });
+
     const [error, setError] = useState('');
 
     const handleChange = (e) => {
@@ -14,24 +15,90 @@ const ContactForm = () => {
     };
 
     const handlePhoneChange = (e) => {
-        const value = e.target.value.replace(/\D/g, '');
+        let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
         let formattedValue = value;
 
-        if (value.length > 1) {
-            formattedValue = `+7 ${value.substring(1, 4)} ${value.substring(4, 7)} ${value.substring(7, 9)} ${value.substring(9, 11)}`.trim();
+        // If the input is empty or starts fresh, prepend '+'
+        if (!value) {
+            formattedValue = '+';
+        } else {
+            // Ensure the value starts with '7' (assuming Russian numbers)
+            if (!value.startsWith('7')) {
+                value = '7' + value;
+            }
+            // Format the number: +7 XXX XXX XX XX
+            if (value.length >= 1) {
+                formattedValue = `+${value.substring(0, 1)}`; // +7
+                if (value.length >= 2) {
+                    formattedValue += ` ${value.substring(1, 4)}`; // XXX
+                    if (value.length >= 5) {
+                        formattedValue += ` ${value.substring(4, 7)}`; // XXX
+                        if (value.length >= 8) {
+                            formattedValue += ` ${value.substring(7, 9)}`; // XX
+                            if (value.length >= 10) {
+                                formattedValue += ` ${value.substring(9, 11)}`; // XX
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         setFormData(prev => ({ ...prev, phone: formattedValue }));
     };
 
-    const handleSubmit = (e) => {
+    const handlePhoneFocus = (e) => {
+        // On focus, if the input is empty, set it to '+'
+        if (!formData.phone) {
+            setFormData(prev => ({ ...prev, phone: '+' }));
+        }
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const digitsOnly = formData.phone.replace(/\D/g, '');
         if (digitsOnly.length !== 11) {
             setError('Номер телефона должен содержать 10 цифр');
             return;
         }
-        console.log('Форма отправлена:', { name, phone: `+${digitsOnly}` });
+        if (!formData.name.trim()) {
+            setError('Пожалуйста, укажите имя');
+            return;
+        }
+
+        const payload = {
+            name: formData.name,
+            phone: `+${digitsOnly}`,
+            service: formData.selectedService
+        };
+
+        console.log('Отправляемые данные:', payload);
+
+        try {
+            const response = await fetch('/api/lead', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
+
+            if (response.ok) {
+                console.log('Заявка успешно отправлена:', payload);
+                setError('');
+            } else {
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    const errorData = await response.json();
+                    setError(errorData.message || 'Ошибка при отправке заявки');
+                } else {
+                    setError(`Ошибка сервера: ${response.status} ${response.statusText}`);
+                }
+            }
+        } catch (error) {
+            console.error('Ошибка:', error);
+            setError('Не удалось отправить заявку. Проверьте подключение.');
+        }
     };
 
     return (
@@ -53,6 +120,7 @@ const ContactForm = () => {
                         <img src="/user.svg" alt="user" className="h-6 w-6" />
                         <input
                             type="text"
+                            name="name"
                             placeholder="Имя"
                             value={formData.name}
                             onChange={handleChange}
@@ -66,6 +134,7 @@ const ContactForm = () => {
                                 type="tel"
                                 value={formData.phone}
                                 onChange={handlePhoneChange}
+                                onFocus={handlePhoneFocus}
                                 placeholder="+7 (___) ___-__-__"
                                 className="border-none focus:outline-none w-full text-lg"
                             />

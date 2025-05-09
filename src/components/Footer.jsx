@@ -25,21 +25,21 @@ export default function Footer() {
                     </div>
 
                     <div className="flex gap-3 md:gap-2 items-center">
-                        <a href="#" className="bg-[#135EC8] h-12 w-12 md:h-16 md:w-16 rounded-[10px] flex items-center justify-center">
+                        <a href="https://www.instagram.com/eyemax_astana?igsh=MWNrdGZvejIweTZ5dA==" className="bg-[#135EC8] h-12 w-12 md:h-16 md:w-16 rounded-[10px] flex items-center justify-center">
                             <img
                                 src="/Insta1.svg"
                                 alt="Instagram"
                                 className="h-8 md:h-12"
                             />
                         </a>
-                        <a href="#" className="bg-[#135EC8] h-12 w-12 md:h-16 md:w-16 rounded-[10px] flex items-center justify-center">
+                        <a href="https://wa.me/77008008796" className="bg-[#135EC8] h-12 w-12 md:h-16 md:w-16 rounded-[10px] flex items-center justify-center">
                             <img
                                 src="/Wp1.svg"
                                 alt="Whatsapp"
                                 className="h-8 md:h-12"
                             />
                         </a>
-                        <a href="#" className="bg-[#135EC8] h-12 w-12 md:h-16 md:w-16 rounded-[10px] flex items-center justify-center">
+                        <a href="https://youtube.com/@eyemax-astana?si=EhcDziv0R6xRqbgK" className="bg-[#135EC8] h-12 w-12 md:h-16 md:w-16 rounded-[10px] flex items-center justify-center">
                             <img
                                 src="/Yt1.svg"
                                 alt="YouTube"
@@ -69,19 +69,19 @@ export default function Footer() {
                     </div>
 
                     <div className="flex gap-2 items-center">
-                        <a href="#" className="bg-[#135EC8] h-16 w-16 rounded-[10px] flex items-center justify-center">
+                        <a href="https://2gis.kz/astana/geo/70000001089686002" className="bg-[#135EC8] h-16 w-16 rounded-[10px] flex items-center justify-center">
                             <img
                                 src="/Address2.svg"
                                 alt="Map"
                             />
                         </a>
-                        <a href="#" className="bg-[#135EC8] h-16 w-16 rounded-[10px] flex items-center justify-center">
+                        <a href="https://2gis.kz/astana/geo/70000001089686002" className="bg-[#135EC8] h-16 w-16 rounded-[10px] flex items-center justify-center">
                             <img
                                 src="/Address3.svg"
                                 alt="Map"
                             />
                         </a>
-                        <a href="#" className="bg-[#135EC8] h-16 w-16 rounded-[10px] flex items-center justify-center">
+                        <a href="https://2gis.kz/astana/geo/70000001089686002" className="bg-[#135EC8] h-16 w-16 rounded-[10px] flex items-center justify-center">
                         </a>
                     </div>
                 </div>

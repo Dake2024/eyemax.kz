@@ -14,6 +14,7 @@ const ConsultationModal = ({ isOpen, onClose }) => {
         phone: '',
         selectedService: 'femto-lasik'
     });
+
     const [error, setError] = useState('');
 
     const handleChange = (e) => {
