@@ -75,14 +75,6 @@ export default function Footer() {
                                 alt="Map"
                             />
                         </a>
-                        <a href="https://2gis.kz/astana/geo/70000001089686002" className="bg-[#135EC8] h-16 w-16 rounded-[10px] flex items-center justify-center">
-                            <img
-                                src="/Address3.svg"
-                                alt="Map"
-                            />
-                        </a>
-                        <a href="https://2gis.kz/astana/geo/70000001089686002" className="bg-[#135EC8] h-16 w-16 rounded-[10px] flex items-center justify-center">
-                        </a>
                     </div>
                 </div>
             </div>
