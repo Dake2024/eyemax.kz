@@ -15,7 +15,7 @@
 }
 
 .animate-eye {
-    animation: rotateAndSlide 2s ease-in-out forwards;
+    animation: rotateAndSlide 3s ease-in-out forwards;
     transform-origin: center center; /* Ensure rotation happens around the center */
 }
 
