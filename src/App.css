@@ -21,7 +21,7 @@
 
 /* Blur effect for the background */
 .blur-sm {
-    filter: blur(4px);
+    filter: blur(2px);
 }
 
 .blur-none {
