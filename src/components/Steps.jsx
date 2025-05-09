@@ -3,7 +3,7 @@ import React from 'react';
 const Steps = () => {
     return (
         <div id="steps">
-            <div className="py-0 md:py-16 px-[6%] w-full">
+            <div className="py-2 md:py-16 px-[6%] w-full">
                 {/* Заголовок */}
                 <h2 className="flex flex-col text-[40px] md:text-[64px] font-bold text-black mb-12 font-bebas leading-none">
                     ВАШ ПУТЬ <span>К <span className="text-[#0E3D91]">ИДЕАЛЬНОМУ ЗРЕНИЮ</span></span>
