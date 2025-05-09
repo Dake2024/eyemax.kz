@@ -2,17 +2,27 @@ import {useState} from "react";
 
 const faqData = [
     {
-        question: "СКОЛЬКО ДЛИТЬСЯ ЛЕЧЕНИЕ?",
+        question: "Когда можно водить машину, пользоваться телефоном, смотреть ТВ?",
         answer:
-            "Аваавыфвывфывавававававыфвывфывавыфвыв",
+            "- Гаджетами можно пользоваться уже на следующий день без каких либо ограничений! Можно приезжать за рулем на послеоперационный осмотр на следующий день после операции.",
     },
     {
-        question: "КАК ПОДГОТОВИТЬСЯ К ПРОЦЕДУРЕ?",
-        answer: `Ответ на второй вопрос`,
+        question: "Можно ли делать коррекцию при беременности?",
+        answer: `- Коррекция зрения во времени беременности противопоказана. Можно проводить операцию через 3 месяца после родов.`,
     },
     {
-        question: "КАКОВА СТОИМОСТЬ ЛЕЧЕНИЯ?",
-        answer: `Ответ на третий вопрос`,
+        question: "Когда можно заниматься спортом?",
+        answer: `При методике Femto LASIK: через 2 недели.
+При методике SMILE PRO: уже на следующий день вы можете заниматься любым видом спорта, кроме плавания.`,
+    },
+    {
+        question: "Когда возвращаться к работе?",
+        answer: `Если у Вас офисная работа, то уже на следующий день после операции.
+– При необходимости выдаём больничный.`,
+    },
+    {
+        question: "Больно ли? Нужен ли наркоз?",
+        answer: `– Нет. Анестезия обеспечивается только за счет глазных капель, без уколов и общего наркоза.`,
     },
 ];
 
@@ -24,12 +34,12 @@ const FAQ = () => {
     };
 
     return (
-        <div id="faq" className="mt-20 md:mt-44 w-full md:w-max md:px-0 px-[6%] font-gilroy">
+        <div id="faq" className="mt-20 md:mt-44 w-full md:w-full px-[6%] font-gilroy">
             <div className="mb-6 lg:mb-16 relative">
                 <h2 className="w-[80%] text-[40px] md:text-[64px] font-bebas text-black font-bold leading-none">ЧАСТО ЗАДОВАЕМЫЕ <span
                     className="text-[#0E3D91]">ВОПРОСЫ</span></h2>
-                <img src="/Faq1.svg" alt="FAG" className="hidden md:block absolute -top-25 -right-45"/>
-                <img src="/Faq1.svg" alt="FAG" className="block md:hidden w-20 absolute max-[374px]:right-0 right-10 top-3"/>
+                <img src="/Faq1.svg" alt="FAG" className="hidden md:block absolute -top-25 right-0"/>
+                <img src="/Faq1.svg" alt="FAG" className="block md:hidden w-20 absolute max-[374px]:right-0 right-10 -top-5"/>
             </div>
             <div className="space-y-4">
                 {faqData.map((faq, index) => (
