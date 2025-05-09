@@ -57,11 +57,11 @@ export default function Announcement({onOpenModal}) {
                 <h2 className="w-2/3 text-3xl md:text-5xl font-bold uppercase text-black font-bebas">И ПОЛУЧИ:</h2>
                 <img src="/Banner4.svg" alt="Banner" className="absolute top-5 right-[10%] w-32"/>
 
-                <img src="/Banner1.svg" alt="Banner"/>
+                <img src="/An5.svg" alt="Banner"/>
 
-                <img src="/Banner2.svg" alt="Banner"/>
+                <img src="/An4.svg" alt="Banner"/>
 
-                <img src="/Banner3.svg" alt="Banner"/>
+                <img src="/An3.svg" alt="Banner"/>
             </div>
 
             {/* Таймер */}

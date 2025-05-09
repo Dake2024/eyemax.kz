@@ -3,7 +3,7 @@ import React from 'react';
 export default function Footer() {
     return (
         <footer className="bg-[#COCOCO] text-white mb-12 mt-12 md:mt-20 px-[6%] pb-[3%]">
-            <div className="flex gap-5">
+            <div className="flex flex-col md:flex-row gap-5">
                 <div className="flex flex-col gap-6 md:gap-8 w-full rounded-xl border-2 border-[#D4E1F8] p-8 md:p-12 font-bebas">
                     {/* Заголовок */}
                     <h2 className="text-[40px] md:text-[48px] text-black font-bold uppercase">
@@ -48,7 +48,7 @@ export default function Footer() {
                         </a>
                     </div>
                 </div>
-                <div className="hidden md:flex flex-col gap-8 w-full mx-auto rounded-xl border-2 border-[#D4E1F8] p-12">
+                <div className="flex flex-col gap-6 md:gap-8 w-full mx-auto rounded-xl border-2 border-[#D4E1F8] p-8 md:p-12 font-bebas">
                     {/* Заголовок */}
                     <h2 className="font-bebas text-[40px] md:text-[48px] text-black font-bold uppercase">
                         НАШ <span className="text-[#0E3D91]">АДРЕС</span>
@@ -58,21 +58,22 @@ export default function Footer() {
                         <img
                             src="/Address1.svg"
                             alt="Contacts"
-                            className="h-8 md:h-10" // Добавил размеры для иконки
+                            className="h-7 md:h-10" // Добавил размеры для иконки
                         />
                         <a
                             href="#"
-                            className="text-black text-4xl leading-[110%] tracking-[0.01em] font-bebas hover:opacity-80 transition-opacity"
+                            className="text-black text-[32px] md:text-[40px] leading-[110%] tracking-[0.01em] font-bebas hover:opacity-80 transition-opacity"
                         >
                             УЛ. ВАЛОВЛАОВ 43/2
                         </a>
                     </div>
 
                     <div className="flex gap-2 items-center">
-                        <a href="https://2gis.kz/astana/geo/70000001089686002" className="bg-[#135EC8] h-16 w-16 rounded-[10px] flex items-center justify-center">
+                        <a href="https://2gis.kz/astana/geo/70000001089686002" className="bg-[#135EC8] h-12 w-12 md:h-16 md:w-16 rounded-[10px] flex items-center justify-center">
                             <img
                                 src="/Address2.svg"
                                 alt="Map"
+                                className="h-8 md:h-12"
                             />
                         </a>
                     </div>
