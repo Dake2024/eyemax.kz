@@ -34,6 +34,10 @@ const ConsultationModal = ({ isOpen, onClose }) => {
             setError('Номер телефона должен содержать 10 цифр');
             return;
         }
+        if (!formData.name.trim()) {
+            setError('Пожалуйста, укажите имя');
+            return;
+        }
 
         const payload = {
             name: formData.name,
@@ -41,10 +45,10 @@ const ConsultationModal = ({ isOpen, onClose }) => {
             service: formData.selectedService === 'femto-lasik' ? 'femto lasik' : 'smile pro'
         };
 
-        console.log('Отправляемые данные:', payload); // Логирование данных
+        console.log('Отправляемые данные:', payload);
 
         try {
-            const response = await fetch('https://Dake2025.pythonanywhere.com/lead', {
+            const response = await fetch('/api/lead', { // Use proxied path
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -54,15 +58,15 @@ const ConsultationModal = ({ isOpen, onClose }) => {
 
             if (response.ok) {
                 console.log('Заявка успешно отправлена:', payload);
-                setError(''); // Очистка ошибок
-                onClose(); // Закрытие модального окна
+                setError('');
+                onClose();
             } else {
                 const errorData = await response.json();
                 setError(errorData.message || 'Ошибка при отправке заявки');
             }
         } catch (error) {
-            console.error('Ошибка сети:', error);
-            setError('Ошибка сети. Пожалуйста, попробуйте еще раз.');
+            console.error('Ошибка:', error);
+            setError('Не удалось отправить заявку. Проверьте подключение.');
         }
     };
 
