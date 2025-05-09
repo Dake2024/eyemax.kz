@@ -3,8 +3,8 @@ import React from 'react';
 const Request = ({onOpenModal}) => {
     return (
         <div className="flex flex-col py-12 gap-12 md:gap-16 items-center px-[6%] md:px-0">
-            <div className="flex flex-row items-center rounded-lg border-2 border-[#0E3D91] h-[136px]">
-                <img src="/Steps2.svg" alt="Steps" className="h-[130%] mb-10"/>
+            <div className="flex flex-row items-center rounded-lg border-2 border-[#0E3D91] h-[136px] md:h-[165px]">
+                <img src="/Steps2.svg" alt="Steps" className="max-[374px]:h-[100%] max-[767px]:h-[130%] md:h-[125%] max-[374px]:mb-0 mb-10"/>
                 <p className="hidden md:flex text-[32px] font-medium flex-col p-4 font-gilroy">
                     <span>
                         Мы сопровождаем вас <span className="text-[#0E3D91]">весь путь</span> —
@@ -13,7 +13,7 @@ const Request = ({onOpenModal}) => {
                         до <span className="text-[#0E3D91]">полного восстановления</span> зрения
                     </span>
                 </p>
-                <p className="md:hidden text-lg font-medium p-3 font-gilroy leading-tight">
+                <p className="md:hidden max-[374px]:text-[12px] max-[767px]:text-[18px] font-medium p-2 font-gilroy leading-tight">
                     Мы сопровождаем вас <span className="text-[#0E3D91]">весь путь</span> —
                     до <span className="text-[#0E3D91]">полного восстановления</span> зрения
                 </p>

@@ -69,19 +69,19 @@ export default function Announcement({onOpenModal}) {
                 <p className="text-center text-[40px] md:text-[64px] font-bold font-bebas mb-8 hidden md:block">ОСТАЛОСЬ:</p>
                 <div className="flex gap-2 md:gap-6 text-white font-bebas font-bold">
                     <div
-                        className="text-center bg-[#244D97] w-28 h-28 md:w-48 md:h-48 rounded-[20px] flex flex-col items-center justify-center leading-none">
-                        <div className="text-[64px] md:text-[140px]">{timeLeft.days}</div>
-                        <div className="text-[24px] md:text-[48px] uppercase">Дней</div>
+                        className="text-center bg-[#244D97] max-[374px]:w-20 max-[374px]:h-20 w-24 h-24 md:w-48 md:h-48 rounded-[20px] flex flex-col items-center justify-center leading-none">
+                        <div className="max-[374px]:text-[50px] text-[64px] md:text-[140px]">{timeLeft.days}</div>
+                        <div className="max-[374px]:text-[18px] text-[24px] md:text-[48px] uppercase">Дней</div>
                     </div>
                     <div
-                        className="text-center bg-[#244D97] w-28 h-28 md:w-48 md:h-48 rounded-[20px] flex flex-col items-center justify-center leading-none">
-                        <div className="text-[64px] md:text-[140px] font-bold">{timeLeft.hours}</div>
-                        <div className="text-[24px] md:text-[48px] uppercase">Часов</div>
+                        className="text-center bg-[#244D97] max-[374px]:w-20 max-[374px]:h-20 w-24 h-24 md:w-48 md:h-48 rounded-[20px] flex flex-col items-center justify-center leading-none">
+                        <div className="max-[374px]:text-[50px] text-[64px] md:text-[140px] font-bold">{timeLeft.hours}</div>
+                        <div className="max-[374px]:text-[18px] text-[24px] md:text-[48px] uppercase">Часов</div>
                     </div>
                     <div
-                        className="text-center bg-[#244D97] w-28 h-28 md:w-48 md:h-48 rounded-[20px] flex flex-col items-center justify-center leading-none">
-                        <div className="text-[64px] md:text-[140px] font-bold">{timeLeft.minutes}</div>
-                        <div className="text-[24px] md:text-[48px] uppercase">Минут</div>
+                        className="text-center bg-[#244D97] max-[374px]:w-20 max-[374px]:h-20 w-24 h-24 md:w-48 md:h-48 rounded-[20px] flex flex-col items-center justify-center leading-none">
+                        <div className="max-[374px]:text-[50px] text-[64px] md:text-[140px] font-bold">{timeLeft.minutes}</div>
+                        <div className="max-[374px]:text-[18px] text-[24px] md:text-[48px] uppercase">Минут</div>
                     </div>
                 </div>
             </div>

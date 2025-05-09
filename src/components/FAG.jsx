@@ -29,7 +29,7 @@ const FAQ = () => {
                 <h2 className="w-[80%] text-[40px] md:text-[64px] font-bebas text-black font-bold leading-none">ЧАСТО ЗАДОВАЕМЫЕ <span
                     className="text-[#0E3D91]">ВОПРОСЫ</span></h2>
                 <img src="/Faq1.svg" alt="FAG" className="hidden md:block absolute -top-25 -right-45"/>
-                <img src="/Faq1.svg" alt="FAG" className="block md:hidden w-20 absolute right-10 top-3"/>
+                <img src="/Faq1.svg" alt="FAG" className="block md:hidden w-20 absolute max-[374px]:right-0 right-10 top-3"/>
             </div>
             <div className="space-y-4">
                 {faqData.map((faq, index) => (

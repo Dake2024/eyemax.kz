@@ -26,10 +26,10 @@ const Steps = () => {
                                 </div>
                             </div>
                             <div>
-                                <h3 className="text-[24px] md:text-[40px] font-extrabold text-[#0E3D91] mb-2">
+                                <h3 className="max-[374px]:text-[18px] text-[22px] md:text-[40px] font-extrabold text-[#0E3D91] mb-2">
                                     Полная диагностика
                                 </h3>
-                                <p className="text-black text-[18px] md:text-[26px] flex flex-col">
+                                <p className="text-black max-[374px]:text-[14px] text-[18px] md:text-[26px] flex flex-col">
                                     Узнайте, подходит ли вам лазерная коррекция, выберите<span> оптимальный метод вместе с врачом.</span>
                                 </p>
                             </div>
@@ -45,10 +45,10 @@ const Steps = () => {
                                 </div>
                             </div>
                             <div>
-                                <h3 className="text-[24px] md:text-[40px] font-extrabold text-[#0E3D91] mb-2">
+                                <h3 className="max-[374px]:text-[18px] text-[22px] md:text-[40px] font-extrabold text-[#0E3D91] mb-2">
                                     Быстрая зона на операцию
                                 </h3>
-                                <p className="text-black text-[18px] md:text-[26px]">
+                                <p className="text-black max-[374px]:text-[14px] text-[18px] md:text-[26px]">
                                     Планируйте операцию уже на следующий день после диагностики!
                                 </p>
                             </div>
@@ -64,10 +64,10 @@ const Steps = () => {
                                 </div>
                             </div>
                             <div>
-                                <h3 className="text-[24px] md:text-[40px] font-extrabold text-[#0E3D91] mb-2">
+                                <h3 className="max-[374px]:text-[18px] text-[22px] md:text-[40px] font-extrabold text-[#0E3D91] mb-2">
                                     Минимальная подготовка
                                 </h3>
-                                <p className="text-black text-[18px] md:text-[26px] flex flex-col">
+                                <p className="text-black max-[374px]:text-[14px] text-[18px] md:text-[26px] flex flex-col">
                                     Сдайте всего 3 анализа (ВИЧ, гепатит, микрофлора глаза) – это можно <span>сделать прямо у
                                     нас в клинике.</span>
                                 </p>
@@ -85,10 +85,10 @@ const Steps = () => {
                                 </div>
                             </div>
                             <div>
-                                <h3 className="text-[24px] md:text-[40px] font-extrabold text-[#0E3D91] mb-2">
+                                <h3 className="max-[374px]:text-[18px] text-[22px] md:text-[40px] font-extrabold text-[#0E3D91] mb-2">
                                     Новое зрение без очков и линз
                                 </h3>
-                                <p className="text-black text-[18px] md:text-[26px]">
+                                <p className="text-black max-[374px]:text-[14px] text-[18px] md:text-[26px]">
                                     Уже на следующий день после коррекции – вы видите мир чётко и ясно!
                                 </p>
                             </div>

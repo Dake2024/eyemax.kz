@@ -27,15 +27,15 @@ const Hero = ({onOpenModal}) => {
                 <img src="/Hero1.svg" alt="Hero" />
             </div>
             <div className="flex flex-col md:hidden w-full justify-center relative">
-                <p className="flex flex-col items-center text-[36px] font-russo text-white leading-12"><span>Верни <span
-                    className="text-white bg-[#1B0ED4] rounded-lg text-[34px] px-4 py-1 leading-none">100% зрение</span></span><span>за 15 минут</span></p>
+                <p className="flex flex-col items-center max-[374px]:text-[28px] text-[34px] font-russo text-white leading-12"><span>Верни <span
+                    className="text-white bg-[#1B0ED4] rounded-lg max-[374px]:text-[26px] text-[33px] px-3 py-1 leading-none">100% зрение</span></span><span>за 15 минут</span></p>
                 <img src="/Hero111.svg" alt="Hero2" className="" />
                 <img src="/Hero3.svg" alt="Hero3" className="absolute bottom-0" />
                 <div className="px-[6%] absolute flex flex-col items-center bottom-20">
-                    <p className="bg-[#808080B0] text-white p-6 rounded-xl border-white border-1 text-2xl font-bold font-bebas" style={{ backdropFilter: 'blur(13.399999618530273px)' }}><span className="text-[#E4FF35]">Лазерная коррекция</span> зрения “Femto LASIK” — по суперцене <span className="text-[#E4FF35]">410 000 тг</span> за оба глаза только <span className="text-[#E4FF35]">до конца мая!</span></p>
+                    <p className="bg-[#808080B0] text-white max-[374px]:p-3 p-6 rounded-xl border-white border-1 max-[374px]:text-xl text-2xl font-bold font-bebas" style={{ backdropFilter: 'blur(13.399999618530273px)' }}><span className="text-[#E4FF35]">Лазерная коррекция</span> зрения “Femto LASIK” — по суперцене <span className="text-[#E4FF35]">410 000 тг</span> за оба глаза только <span className="text-[#E4FF35]">до конца мая!</span></p>
                     <button
                         onClick={onOpenModal}
-                        className="mt-3 rounded-xl bg-gradient-to-r from-[#3480D4] to-[#5056DC] shadow-[0px_2px_10px_4px_rgba(101,170,243,0.5)] w-max py-5 px-12 shadow-[0px 2px 10px 4px #65AAF380]">
+                        className="mt-3 rounded-xl bg-gradient-to-r from-[#3480D4] to-[#5056DC] shadow-[0px_2px_10px_4px_rgba(101,170,243,0.5)] w-max max-[374px]:py-3 max-[374px]:px-8 py-5 px-12 shadow-[0px 2px 10px 4px #65AAF380]">
                         <p className="text-white font-bold text-2xl font-bebas uppercase">Получить консультацию</p>
                     </button>
                 </div>
