@@ -5,7 +5,7 @@ export default function Announcement({onOpenModal}) {
 
     function calculateTimeLeft() {
         const now = new Date();
-        const targetDate = new Date(now.getFullYear(), 4, 20); // 20 мая текущего года
+        const targetDate = new Date(now.getFullYear(), 4, 31); // 20 мая текущего года
         if (now > targetDate) {
             targetDate.setFullYear(targetDate.getFullYear() + 1); // Если дата прошла, берем следующий год
         }
