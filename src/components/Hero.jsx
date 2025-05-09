@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = ({onOpenModal}) => {
     return (
-        <div className="pt-2 md:pt-8 md:pb-24 md:px-[6%] bg-[#C0C0C0] md:bg-[#F9F9F9]">
+        <div className="pt-2 md:pt-6 md:pb-24 md:px-[6%] bg-[#C0C0C0] md:bg-[#F9F9F9]">
             <div className="hidden md:flex flex-row gap-24 items-center">
                 <div className="flex flex-col gap-8 font-gilroy">
                     <p className="text-6xl font-semibold uppercase text-[#47484A] leading-18">Верни <span
