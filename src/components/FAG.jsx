@@ -1,4 +1,18 @@
-import {useState} from "react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+// Variants for FAQ answer animation
+const answerVariants = {
+    hidden: { opacity: 0, height: 0, overflow: "hidden" },
+    visible: {
+        opacity: 1,
+        height: "auto",
+        transition: {
+            duration: 0.4,
+            ease: "easeInOut"
+        }
+    }
+};
 
 const faqData = [
     {
@@ -36,10 +50,11 @@ const FAQ = () => {
     return (
         <div id="faq" className="mt-20 md:mt-44 w-full md:w-full px-[6%] font-gilroy">
             <div className="mb-6 lg:mb-16 relative">
-                <h2 className="w-[80%] text-[40px] md:text-[64px] font-bebas text-black font-bold leading-none">ЧАСТО ЗАДОВАЕМЫЕ <span
-                    className="text-[#0E3D91]">ВОПРОСЫ</span></h2>
-                <img src="/Faq1.svg" alt="FAG" className="hidden md:block absolute -top-25 right-0"/>
-                <img src="/Faq1.svg" alt="FAG" className="block md:hidden w-20 absolute max-[374px]:right-0 right-10 -top-5"/>
+                <h2 className="w-[80%] text-[40px] md:text-[64px] font-bebas text-black font-bold leading-none">
+                    ЧАСТО ЗАДОВАЕМЫЕ <span className="text-[#0E3D91]">ВОПРОСЫ</span>
+                </h2>
+                <img src="/Faq1.svg" alt="FAQ" className="hidden md:block absolute -top-25 right-0" />
+                <img src="/Faq1.svg" alt="FAQ" className="block md:hidden w-20 absolute max-[374px]:right-0 right-10 -top-5" />
             </div>
             <div className="space-y-4">
                 {faqData.map((faq, index) => (
@@ -49,23 +64,29 @@ const FAQ = () => {
                                 className="cursor-pointer flex justify-between items-center w-full bg-[#3689FB] text-white py-4 px-6 font-bold text-[20px] md:text-[28px] text-left focus:outline-none rounded-xl"
                                 onClick={() => toggleFAQ(index)}
                             >
-        <span className="break-words whitespace-pre-line text-left font-bebas">
-          {faq.question}
-        </span>
+                                <span className="break-words whitespace-pre-line text-left font-bebas">
+                                    {faq.question}
+                                </span>
                                 <span className="ml-4 flex-shrink-0">
-          {openIndex === index ? (
-              <img src="/Close1.svg" alt="Close" className="h-8 w-8" />
-          ) : (
-              <img src="/Open1.svg" alt="Open" className="h-8 w-8" />
-          )}
-        </span>
+                                    {openIndex === index ? (
+                                        <img src="/Close1.svg" alt="Close" className="h-8 w-8" />
+                                    ) : (
+                                        <img src="/Open1.svg" alt="Open" className="h-8 w-8" />
+                                    )}
+                                </span>
                             </button>
-                            {openIndex === index && (
-                                <div
-                                    className="bg-[#69A7FB] py-4 px-6 text-[18px] md:text-[24px] text-white font-gilroy rounded-b-xl break-words whitespace-pre-line"
-                                    dangerouslySetInnerHTML={{ __html: faq.answer }}
-                                />
-                            )}
+                            <AnimatePresence>
+                                {openIndex === index && (
+                                    <motion.div
+                                        className="bg-[#69A7FB] overflow-hidden py-4 px-6 text-[18px] md:text-[24px] text-white font-gilroy rounded-b-xl break-words whitespace-pre-line"
+                                        variants={answerVariants}
+                                        initial="hidden"
+                                        animate="visible"
+                                        exit="hidden"
+                                        dangerouslySetInnerHTML={{ __html: faq.answer }}
+                                    />
+                                )}
+                            </AnimatePresence>
                         </div>
                     </div>
                 ))}

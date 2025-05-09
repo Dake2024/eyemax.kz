@@ -20,16 +20,16 @@ function App() {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 200);
+            setIsScrolled(window.scrollY > 10);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen bg-[#F9F9F9]">
             {/* Передаем handleOpenModal в Header */}
-            <div className={`sticky top-0 z-50 transition-all duration-50 ${isScrolled ? 'bg-transparent' : 'bg-[#F9F9F9]'}`}>
+            <div className={`sticky top-0 z-50 transition-all duration-50 bg-transparent`}>
                 <div className="md:px-[6%] md:py-[3%]">
                     <Header onOpenModal={handleOpenModal} />
                 </div>

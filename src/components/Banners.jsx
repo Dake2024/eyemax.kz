@@ -33,7 +33,7 @@ export default function WhyEyemax() {
         <div id="about" className="relative md:pt-16">
             <img src="/Side2.svg" alt="Side" className="hidden md:block absolute right-0 -top-30" />
             <img src="/Side2.svg" alt="Side" className="block md:hidden absolute right-0 -top-30 w-32" />
-            <section className="py-16 md:mb-8 bg-white px-[6%]">
+            <section className="py-16 md:pb-8 bg-white px-[6%]">
                 <div className="container mx-auto w-full">
                     {/* Заголовок и подзаголовок */}
                     <div className="mb-8">
