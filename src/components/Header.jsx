@@ -5,8 +5,8 @@ export default function Header({onOpenModal}) {
 
     return (
         <header className="md:bg-white bg-[#C0C0C0] sticky top-0 z-50 md:rounded-[20px] md:shadow-[0_0_24px_0_rgba(238,238,229,0.1)]">
-            <div className="container mx-auto md:px-8 md:py-8 px-6 py-12">
-                <div className="flex justify-between items-center">
+            <div className="container">
+                <div className="flex justify-between items-center mx-auto md:px-8 md:py-8 px-6 py-12">
                     {/* Логотип */}
                     <div className="flex items-center">
                         <a href="#" className="flex items-center">
@@ -60,7 +60,7 @@ export default function Header({onOpenModal}) {
 
                 {/* Мобильное меню */}
                 {isMenuOpen && (
-                    <div className="md:hidden mt-8 pb-2 space-y-3 text-white text-[16px] font-medium font-gilroy">
+                    <div className="md:hidden absolute w-full px-6 pb-3 space-y-3 text-white backdrop-blur-md text-[16px] font-medium font-gilroy">
                         <a
                             href="#about"
                             className="block py-2"
