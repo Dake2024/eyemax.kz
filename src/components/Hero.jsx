@@ -1,6 +1,13 @@
 import React from 'react';
 
 const Hero = ({onOpenModal}) => {
+    const scrollToReviews = () => {
+        const reviewsSection = document.getElementById('reviews');
+        if (reviewsSection) {
+            reviewsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className="pt-2 md:pt-6 md:pb-24 md:px-[6%] bg-[#C0C0C0] md:bg-[#F9F9F9]">
             <div className="hidden md:flex flex-row gap-24 items-center">
@@ -16,7 +23,7 @@ const Hero = ({onOpenModal}) => {
                             <p className="text-white font-bold text-2xl">Получить консультацию</p>
                         </button>
                         <div className="w-[80%] rounded-xl p-[2px] bg-gradient-to-r from-[#5056DC] to-[#3480D4]">
-                            <button className="w-full rounded-[11px] bg-white py-3">
+                            <button onClick={scrollToReviews} className="w-full rounded-[11px] bg-white py-3 cursor-pointer">
                                 <p className="text-2xl bg-gradient-to-r from-[#3480D4] to-[#5056DC] bg-clip-text text-transparent">
                                     Смотреть отзывы
                                 </p>
