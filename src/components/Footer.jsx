@@ -66,7 +66,7 @@ export default function Footer() {
                             href="#"
                             className="text-black text-[32px] md:text-[40px] leading-[110%] tracking-[0.01em] font-bebas hover:opacity-80 transition-opacity"
                         >
-                            УЛ. ВАЛОВЛАОВ 43/2
+                            УЛ. КАБАНБАЙ БАТЫР 48/8
                         </a>
                     </div>
 
