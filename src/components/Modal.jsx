@@ -5,21 +5,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 // Variants for backdrop fade effect
 const modalVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1 }
+    visible: { opacity: 1 },
 };
 
 const ConsultationModal = ({ isOpen, onClose }) => {
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
-        selectedService: 'femto-lasik'
+        selectedService: 'femto-lasik',
     });
 
     const [error, setError] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
+        setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
     const handlePhoneChange = (e) => {
@@ -52,13 +52,13 @@ const ConsultationModal = ({ isOpen, onClose }) => {
             }
         }
 
-        setFormData(prev => ({ ...prev, phone: formattedValue }));
+        setFormData((prev) => ({ ...prev, phone: formattedValue }));
     };
 
     const handlePhoneFocus = (e) => {
         // On focus, if the input is empty, set it to '+'
         if (!formData.phone) {
-            setFormData(prev => ({ ...prev, phone: '+' }));
+            setFormData((prev) => ({ ...prev, phone: '+' }));
         }
     };
 
@@ -77,13 +77,13 @@ const ConsultationModal = ({ isOpen, onClose }) => {
         const payload = {
             name: formData.name,
             phone: `+${digitsOnly}`,
-            service: formData.selectedService === 'femto-lasik' ? 'femto lasik' : 'smile pro'
+            service: formData.selectedService === 'femto-lasik' ? 'femto lasik' : 'smile pro',
         };
 
         console.log('Отправляемые данные:', payload);
 
         try {
-            const response = await fetch('https://Dake2025.pythonanywhere.com/lead', {
+            await fetch('https://Dake2025.pythonanywhere.com/lead', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -91,24 +91,23 @@ const ConsultationModal = ({ isOpen, onClose }) => {
                 body: JSON.stringify(payload),
             });
 
-            if (response.ok) {
-                console.log('Заявка успешно отправлена:', payload);
-                setError('');
-                onClose();
-            } else {
-                const contentType = response.headers.get('content-type');
-                if (contentType && contentType.includes('application/json')) {
-                    const errorData = await response.json();
-                    setError(errorData.message || 'Ошибка при отправке заявки');
-                } else {
-                    setError(`Ошибка сервера: ${response.status} ${response.statusText}`);
-                }
-            }
+            console.log('Заявка успешно отправлена:', payload);
+            setError('');
+            window.alert('Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.'); // Use window.alert
+            onClose();
+            // Reset form data
+            setFormData({
+                name: '',
+                phone: '',
+                selectedService: 'femto-lasik',
+            });
         } catch (error) {
             console.error('Ошибка:', error);
             setError('Не удалось отправить заявку. Проверьте подключение.');
+            window.alert('Не удалось отправить заявку. Проверьте подключение и попробуйте снова.'); // Use window.alert
         }
     };
+
 
     return (
         <AnimatePresence>
@@ -132,10 +131,7 @@ const ConsultationModal = ({ isOpen, onClose }) => {
                         <div className="pt-3 px-6 relative">
                             <h2 className="text-black text-2xl md:text-3xl font-bold font-bebas">ОСТАВЬТЕ ЗАЯВКУ</h2>
                             <p className="text-[#0E3D91] text-2xl md:text-3xl font-bold font-bebas">И МЫ С ВАМИ СВЯЖЕМСЯ</p>
-                            <button
-                                onClick={onClose}
-                                className="absolute top-6 right-6 text-black cursor-pointer"
-                            >
+                            <button onClick={onClose} className="absolute top-6 right-6 text-black cursor-pointer">
                                 <X size={32} />
                             </button>
                         </div>
@@ -169,9 +165,12 @@ const ConsultationModal = ({ isOpen, onClose }) => {
                                     {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
                                 </div>
 
+
                                 {/* Service Selection */}
                                 <div className="space-y-2 border-1 border-[#BABABA] rounded-lg">
-                                    <label className={`block rounded-lg p-2 md:p-4 ${formData.selectedService === 'femto-lasik' ? 'bg-[#ECF4FF]' : 'bg-white'}`}>
+                                    <label
+                                        className={`block rounded-lg p-2 md:p-4 ${formData.selectedService === 'femto-lasik' ? 'bg-[#ECF4FF]' : 'bg-white'}`}
+                                    >
                                         <div className="flex items-center space-x-3">
                                             <input
                                                 type="radio"
@@ -184,13 +183,16 @@ const ConsultationModal = ({ isOpen, onClose }) => {
                                             <div>
                                                 <p className="font-medium">Femto LASIK</p>
                                                 <p className="text-[12px] md:text-[14px] text-gray-500">
-                                                    это усовершенствованный вариант классического LASIK, при котором оба этапа операции выполняются с помощью лазеров.
+                                                    это усовершенствованный вариант классического LASIK, при котором оба этапа операции
+                                                    выполняются с помощью лазеров.
                                                 </p>
                                             </div>
                                         </div>
                                     </label>
 
-                                    <label className={`block rounded-lg p-2 md:p-4 ${formData.selectedService === 'smile-pro' ? 'bg-[#ECF4FF]' : 'bg-white'}`}>
+                                    <label
+                                        className={`block rounded-lg p-2 md:p-4 ${formData.selectedService === 'smile-pro' ? 'bg-[#ECF4FF]' : 'bg-white'}`}
+                                    >
                                         <div className="flex items-center space-x-3">
                                             <input
                                                 type="radio"
@@ -203,7 +205,8 @@ const ConsultationModal = ({ isOpen, onClose }) => {
                                             <div>
                                                 <p className="font-medium">SMILE Pro</p>
                                                 <p className="text-[12px] md:text-[14px] text-gray-500">
-                                                    это новейшая технология лазерной коррекции зрения, представляющая собой усовершенствованную версию метода ReLEx SMILE.
+                                                    это новейшая технология лазерной коррекции зрения, представляющая собой
+                                                    усовершенствованную версию метода ReLEx SMILE.
                                                 </p>
                                             </div>
                                         </div>
