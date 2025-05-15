@@ -32,7 +32,7 @@ export default function WhyEyemax() {
     return (
         <div id="about" className="relative md:pt-16">
             <img src="/Side2.svg" alt="Side" className="hidden md:block absolute right-0 -top-30" />
-            <img src="/Side2.svg" alt="Side" className="block md:hidden absolute right-0 -top-30 w-32" />
+            <img src="/Side2.svg" alt="Side" className="block md:hidden absolute right-0 -top-15 w-24" />
             <section className="py-16 md:pb-8 bg-white px-[6%]">
                 <div className="container mx-auto w-full">
                     {/* Заголовок и подзаголовок */}
@@ -59,6 +59,7 @@ export default function WhyEyemax() {
                             />
                         </div>
 
+
                         {/* Карточка 2 */}
                         <div className="bg-[#FAFCFD] border-1 border-[#314F86] bg-opacity-10 rounded-2xl p-6 md:p-8 md:h-72 md:w-full flex md:flex-col relative">
                             <p className="text-2xl md:text-5xl font-bold text-[#314F86] w-[75%] font-bebas">
@@ -74,7 +75,7 @@ export default function WhyEyemax() {
                 </div>
             </section>
             <img src="/Side1.svg" alt="Side" className="hidden md:block absolute left-0 top-96" />
-            <img src="/Side1.svg" alt="Side" className="block md:hidden absolute left-0 bottom-1/3 w-32" />
+            <img src="/Side1.svg" alt="Side" className="block md:hidden absolute left-0 bottom-1/3 w-24" />
             <section className=" pb-12 md:py-16 bg-white px-[6%]">
                 <div className="container mx-auto w-full">
                     {/* Заголовок секции */}
