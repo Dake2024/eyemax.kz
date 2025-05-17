@@ -1,4 +1,59 @@
 import React, { useState } from 'react';
+import { X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+// Variants for backdrop fade effect
+const modalVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+};
+
+// Success Modal Component
+const SuccessModal = ({ isOpen, onClose }) => {
+    return (
+        <AnimatePresence>
+            {isOpen && (
+                <motion.div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-2 md:p-4"
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    variants={modalVariants}
+                    transition={{ duration: 0.3 }}
+                >
+                    <motion.div
+                        className="bg-white rounded-2xl max-w-md w-full overflow-hidden relative p-6 text-center flex flex-col items-center content-center justify-center"
+                        initial={{ scale: 0.9 }}
+                        animate={{ scale: 1 }}
+                        exit={{ scale: 0.9 }}
+                        transition={{ duration: 0.2 }}
+                    >
+                        <button onClick={onClose} className="absolute top-4 right-4 text-black cursor-pointer">
+                            <X size={24} />
+                        </button>
+                        <h2 className="text-black text-2xl md:text-3xl font-bold font-bebas mb-2">
+                            СПАСИБО!
+                        </h2>
+                        <p className="text-[#0E3D91] text-lg md:text-xl font-medium">
+                            Заявка отправлена! Ожидайте звонка.
+                        </p>
+                        <img
+                            src="/Eye1.png"
+                            alt="Eye Animation"
+                            className="h-52"
+                        />
+                        <button
+                            onClick={onClose}
+                            className="bg-[#0E3D91] text-white py-2 px-4 rounded-lg font-bold hover:bg-[#135EC8] transition-colors"
+                        >
+                            Закрыть
+                        </button>
+                    </motion.div>
+                </motion.div>
+            )}
+        </AnimatePresence>
+    );
+};
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -8,6 +63,7 @@ const ContactForm = () => {
     });
 
     const [error, setError] = useState('');
+    const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -47,6 +103,7 @@ const ContactForm = () => {
         setFormData(prev => ({ ...prev, phone: formattedValue }));
     };
 
+
     const handlePhoneFocus = (e) => {
         // On focus, if the input is empty, set it to '+'
         if (!formData.phone) {
@@ -72,8 +129,17 @@ const ContactForm = () => {
             service: formData.selectedService
         };
 
-        console.log('Отправляемые данные:', payload);
+        // Show success modal immediately
+        setIsSuccessModalOpen(true);
+        // Reset form data
+        setFormData({
+            name: '',
+            phone: '',
+            selectedService: 'Консультация'
+        });
+        setError('');
 
+        // Send request in the background
         try {
             const response = await fetch('https://Dake2025.pythonanywhere.com/lead', {
                 method: 'POST',
@@ -83,22 +149,15 @@ const ContactForm = () => {
                 body: JSON.stringify(payload),
             });
 
-            if (response.ok) {
-                console.log('Заявка успешно отправлена:', payload);
-                setError('');
-                onClose();
-            } else {
-                const contentType = response.headers.get('content-type');
-                if (contentType && contentType.includes('application/json')) {
-                    const errorData = await response.json();
-                    setError(errorData.message || 'Ошибка при отправке заявки');
-                } else {
-                    setError(`Ошибка сервера: ${response.status} ${response.statusText}`);
-                }
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
             }
+
+            console.log('Заявка успешно отправлена:', payload);
         } catch (error) {
-            console.error('Ошибка:', error);
-            setError('Не удалось отправить заявку. Проверьте подключение.');
+            console.error('Ошибка при отправке заявки:', error);
+            // Optionally log to a monitoring service or queue for retry
+            // Do not show error to user since success modal is already shown
         }
     };
 
@@ -114,6 +173,7 @@ const ContactForm = () => {
                     <img src="/Contacts1.svg" alt="Question Mark" className="absolute right-[37%] bottom-0 hidden md:block" />
                     <img src="/Contacts1.svg" alt="Question Mark" className="absolute right-0 top-[15%] block md:hidden w-40" />
                 </div>
+
 
                 {/* Правая часть: форма */}
                 <div className="flex flex-col gap-6 w-full md:w-[35%] font-gilroy">
@@ -150,6 +210,12 @@ const ContactForm = () => {
                     </button>
                 </div>
             </div>
+
+            {/* Success Modal */}
+            <SuccessModal
+                isOpen={isSuccessModalOpen}
+                onClose={() => setIsSuccessModalOpen(false)}
+            />
         </div>
     );
 };
