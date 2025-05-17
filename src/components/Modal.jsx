@@ -80,10 +80,19 @@ const ConsultationModal = ({ isOpen, onClose }) => {
             service: formData.selectedService === 'femto-lasik' ? 'femto lasik' : 'smile pro',
         };
 
-        console.log('Отправляемые данные:', payload);
+        // Show success message immediately
+        window.alert('Спасибо, заявка отправлена, ожидайте звонка!');
+        onClose(); // Close the modal
+        // Reset form data
+        setFormData({
+            name: '',
+            phone: '',
+            selectedService: 'femto-lasik',
+        });
 
+        // Send request in the background
         try {
-            await fetch('https://Dake2025.pythonanywhere.com/lead', {
+            const response = await fetch('https://Dake2025.pythonanywhere.com/lead', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -91,19 +100,15 @@ const ConsultationModal = ({ isOpen, onClose }) => {
                 body: JSON.stringify(payload),
             });
 
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
             console.log('Заявка успешно отправлена:', payload);
-            setError('');
-            onClose();
-            // Reset form data
-            setFormData({
-                name: '',
-                phone: '',
-                selectedService: 'femto-lasik',
-            });
         } catch (error) {
-            console.error('Ошибка:', error);
-            setError('Не удалось отправить заявку. Проверьте подключение.');
-            window.alert('Не удалось отправить заявку. Проверьте подключение и попробуйте снова.'); // Use window.alert
+            console.error('Ошибка при отправке заявки:', error);
+            // Optionally log to a monitoring service or queue for retry
+            // Do not show error to user since success was already shown
         }
     };
 
