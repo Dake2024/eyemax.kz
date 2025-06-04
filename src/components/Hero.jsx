@@ -22,7 +22,7 @@ const Hero = ({onOpenModal}) => {
         <div className="pt-2 md:pt-6 md:pb-24 md:px-[6%] bg-[#C0C0C0] md:bg-[#F9F9F9]">
                 <div className="hidden md:flex flex-row gap-24 items-center">
                     <div className="flex flex-col gap-8 font-gilroy">
-                        <p className="text-6xl font-semibold uppercase text-[#47484A] leading-18 z-50">Верни <span
+                        <p className="text-6xl font-semibold uppercase text-[#47484A] leading-18 z-50">Помогаем вернуть <span
                             className="text-white bg-[#2968F6] rounded-xl px-4 leading-none">100% зрение</span> за 15 минут</p>
                         <div className="border-b-2 bg-[#D8D8D8]"></div>
                         <p className="text-2xl font-bold"><span className="text-[#2968F6]">Лазерная коррекция</span> зрения “Femto LASIK” — по суперцене <span className="text-[#2968F6]">370 000 тг</span> за оба глаза только <span className="text-[#2968F6]">до конца мая!</span></p>
@@ -44,7 +44,7 @@ const Hero = ({onOpenModal}) => {
                     <img src="/Hero1.svg" alt="Hero" />
                 </div>
                 <div className="flex flex-col md:hidden w-full justify-center relative">
-                    <p className="flex flex-col items-center max-[374px]:text-[28px] text-[34px] font-russo text-white leading-12"><span>Верни <span
+                    <p className="flex flex-col items-center max-[374px]:text-[28px] text-[34px] font-russo text-white leading-12"><span>Помогаем вернуть <span
                         className="text-white bg-[#1B0ED4] rounded-lg max-[374px]:text-[26px] text-[33px] px-3 py-1 leading-none">100% зрение</span></span><span>за 15 минут</span></p>
                     <div
                         className={`transition-all duration-500 md:blur-none ${
@@ -54,7 +54,7 @@ const Hero = ({onOpenModal}) => {
                         <img src="/Hero3.svg" alt="Hero3" className="absolute bottom-0" />
                         <img src="/Hero111.svg" alt="Hero2" className="" />
                         <div className="absolute flex flex-col items-center bottom-15">
-                            <p className="mx-[6%] bg-[#808080B0] text-white max-[374px]:p-3 p-4 rounded-xl border-white border-1 max-[374px]:text-xl text-2xl font-bold font-bebas" style={{ backdropFilter: 'blur(13.399999618530273px)' }}><span className="text-[#E4FF35]">Лазерная коррекция</span> зрения “Femto LASIK” — по суперцене <span className="text-[#E4FF35]">410 000 тг</span> за оба глаза только <span className="text-[#E4FF35]">до конца мая!</span></p>
+                            <p className="mx-[6%] bg-[#808080B0] text-white max-[374px]:p-3 p-4 rounded-xl border-white border-1 max-[374px]:text-xl text-2xl font-bold font-bebas" style={{ backdropFilter: 'blur(13.399999618530273px)' }}><span className="text-[#E4FF35]">Лазерная коррекция</span> зрения “Femto LASIK” — по суперцене <span className="text-[#E4FF35]">370 000 тг</span> за оба глаза только <span className="text-[#E4FF35]">до конца мая!</span></p>
 
                             <p className="text-center text-red-600 text-[22px] font-bold font-bebas bg-white w-full p-1 mt-2 shadow-[0px_2px_10px_4px_rgba(101,170,243,0.5)]">Ограничения по возрасту 18-45! Город Астана!</p>
                             <button
