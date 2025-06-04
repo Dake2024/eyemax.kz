@@ -23,7 +23,7 @@ const Hero = ({onOpenModal}) => {
                 <div className="hidden md:flex flex-row gap-24 items-center">
                     <div className="flex flex-col gap-8 font-gilroy">
                         <p className="text-6xl font-semibold uppercase text-[#47484A] leading-18 z-50">Помогаем вернуть <span
-                            className="text-white bg-[#2968F6] rounded-xl px-4 leading-none">100% зрение</span> за 15 минут</p>
+                            className="text-white bg-[#2968F6] rounded-xl px-4 leading-none">зрение</span></p>
                         <div className="border-b-2 bg-[#D8D8D8]"></div>
                         <p className="text-2xl font-bold"><span className="text-[#2968F6]">Лазерная коррекция</span> зрения “Femto LASIK” — по суперцене <span className="text-[#2968F6]">370 000 тг</span> за оба глаза только <span className="text-[#2968F6]">до конца мая!</span></p>
                         <div className="flex flex-row gap-5 w-full">
@@ -45,7 +45,7 @@ const Hero = ({onOpenModal}) => {
                 </div>
                 <div className="flex flex-col md:hidden w-full justify-center relative">
                     <p className="flex flex-col items-center max-[374px]:text-[28px] text-[34px] font-russo text-white leading-12"><span className={"text-center"}>Помогаем вернуть <span
-                        className="text-white bg-[#1B0ED4] rounded-lg max-[374px]:text-[26px] text-[33px] px-3 py-1 leading-none">100% зрение</span></span><span>за 15 минут</span></p>
+                        className="text-white bg-[#1B0ED4] rounded-lg max-[374px]:text-[26px] text-[33px] px-3 py-1 leading-none">зрение</span></span></p>
                     <div
                         className={`transition-all duration-500 md:blur-none ${
                             showEye ? 'blur-sm' : 'blur-none'
