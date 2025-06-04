@@ -25,7 +25,7 @@ const Hero = ({onOpenModal}) => {
                         <p className="text-6xl font-semibold uppercase text-[#47484A] leading-18 z-50">Верни <span
                             className="text-white bg-[#2968F6] rounded-xl px-4 leading-none">100% зрение</span> за 15 минут</p>
                         <div className="border-b-2 bg-[#D8D8D8]"></div>
-                        <p className="text-2xl font-bold"><span className="text-[#2968F6]">Лазерная коррекция</span> зрения “Femto LASIK” — по суперцене <span className="text-[#2968F6]">410 000 тг</span> за оба глаза только <span className="text-[#2968F6]">до конца мая!</span></p>
+                        <p className="text-2xl font-bold"><span className="text-[#2968F6]">Лазерная коррекция</span> зрения “Femto LASIK” — по суперцене <span className="text-[#2968F6]">370 000 тг</span> за оба глаза только <span className="text-[#2968F6]">до конца мая!</span></p>
                         <div className="flex flex-row gap-5 w-full">
                             <button
                                 onClick={onOpenModal}

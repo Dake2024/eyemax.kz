@@ -38,7 +38,7 @@ const FAQ = () => {
         <div id="faq" className="mt-20 md:mt-44 w-full md:w-full px-[6%] font-gilroy">
             <div className="mb-6 lg:mb-16 relative">
                 <h2 className="w-[80%] text-[40px] md:text-[64px] font-bebas text-black font-bold leading-none">
-                    ЧАСТО ЗАДОВАЕМЫЕ <span className="text-[#0E3D91]">ВОПРОСЫ</span>
+                    ЧАСТО ЗАДАВАЕМЫЕ <span className="text-[#0E3D91]">ВОПРОСЫ</span>
                 </h2>
                 <img src="/Faq1.svg" alt="FAQ" className="hidden md:block absolute -top-25 right-0" />
                 <img src="/Faq1.svg" alt="FAQ" className="block md:hidden w-20 absolute max-[374px]:right-0 right-0 -top-5" />
