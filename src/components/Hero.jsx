@@ -44,7 +44,7 @@ const Hero = ({onOpenModal}) => {
                     <img src="/Hero1.svg" alt="Hero" />
                 </div>
                 <div className="flex flex-col md:hidden w-full justify-center relative">
-                    <p className="flex flex-col items-center max-[374px]:text-[28px] text-[34px] font-russo text-white leading-12"><span>Помогаем вернуть <span
+                    <p className="flex flex-col items-center max-[374px]:text-[28px] text-[34px] font-russo text-white leading-12"><span className={"text-center"}>Помогаем вернуть <span
                         className="text-white bg-[#1B0ED4] rounded-lg max-[374px]:text-[26px] text-[33px] px-3 py-1 leading-none">100% зрение</span></span><span>за 15 минут</span></p>
                     <div
                         className={`transition-all duration-500 md:blur-none ${
