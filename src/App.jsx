@@ -28,6 +28,7 @@ function App() {
 
     // TikTok Pixel вставка
     useEffect(() => {
+        console.log("ttq script inserted");
         const script = document.createElement('script');
         script.innerHTML = `
             !function (w, d, t) {
@@ -62,6 +63,7 @@ function App() {
         script.type = "text/javascript";
         document.head.appendChild(script);
     }, []);
+    
 
     return (
         <div className="flex flex-col min-h-screen bg-[#F9F9F9]">
