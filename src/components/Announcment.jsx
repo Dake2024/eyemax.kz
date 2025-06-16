@@ -43,7 +43,7 @@ export default function Announcement({onOpenModal}) {
                 </div>
 
                 <div className="flex flex-col gap-5">
-                    <img src="/Banner2.svg" alt="Banner"/>
+                    {/* <img src="/Banner2.svg" alt="Banner"/> */}
 
                     {/* Блок 3 - Консультация */}
                     <img src="/Banner3.svg" alt="Banner"/>
@@ -59,7 +59,7 @@ export default function Announcement({onOpenModal}) {
 
                 <img src="/An5.svg" alt="Banner"/>
 
-                <img src="/An4.svg" alt="Banner"/>
+                {/* <img src="/An4.svg" alt="Banner"/> */}
 
                 <img src="/An3.svg" alt="Banner"/>
             </div>
