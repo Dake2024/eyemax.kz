@@ -5,9 +5,9 @@ export default function Announcement({onOpenModal}) {
 
     function calculateTimeLeft() {
         const now = new Date();
-        const targetDate = new Date(now.getFullYear(), 7, 31); // 20 мая текущего года
+        const targetDate = new Date(now.getFullYear(), 6, 31, 23, 59, 59, 999); // Last day of July (inclusive)
         if (now > targetDate) {
-            targetDate.setFullYear(targetDate.getFullYear() + 1); // Если дата прошла, берем следующий год
+            targetDate.setFullYear(targetDate.getFullYear() + 1); // If date has passed, use next year
         }
 
         const difference = targetDate - now;
@@ -35,7 +35,7 @@ export default function Announcement({onOpenModal}) {
             <div className="hidden md:flex flex-row items-end gap-5">
                 <div className="w-[776px] relative">
                     <h2 className="text-[40px] md:text-[64px] font-bold font-bebas mb-16 uppercase leading-none text-black">
-                        УСПЕЙ ЗАПИСАТЬСЯ ДО <span className="text-[#0E3D91]">КОНЦА ЛЕТА</span> И ПОЛУЧИ:
+                        УСПЕЙ ЗАПИСАТЬСЯ ДО <span className="text-[#0E3D91]">КОНЦА ИЮЛЯ</span> И ПОЛУЧИ:
                     </h2>
                     <img src="/Banner4.svg" alt="Banner" className="absolute -top-10 -right-25"/>
                     {/* Блок 1 - Скидка */}
@@ -52,7 +52,7 @@ export default function Announcement({onOpenModal}) {
 
             <div className="flex flex-col gap-5 md:hidden relative">
                 <h2 className="w-2/3 text-[40px] md:text-[64px] font-bold font-bebas mb-6 uppercase leading-none text-black">
-                    УСПЕЙ ЗАПИСАТЬСЯ ДО <span className="text-[#0E3D91]">КОНЦА ЛЕТА</span>
+                    УСПЕЙ ЗАПИСАТЬСЯ ДО <span className="text-[#0E3D91]">КОНЦА ИЮЛЯ</span>
                 </h2>
                 <h2 className="w-2/3 text-3xl md:text-5xl font-bold uppercase text-black font-bebas">И ПОЛУЧИ:</h2>
                 <img src="/Banner4.svg" alt="Banner" className="absolute top-5 right-0 w-32"/>
