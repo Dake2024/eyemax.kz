@@ -54,7 +54,7 @@ const Hero = ({onOpenModal}) => {
                         <img src="/Hero3.svg" alt="Hero3" className="absolute bottom-0" />
                         <img src="/Hero111.svg" alt="Hero2" className="" />
                         <div className="absolute flex flex-col items-center bottom-15">
-                            <p className="mx-[6%] bg-[#808080B0] text-white max-[374px]:p-3 p-4 rounded-xl border-white border-1 max-[374px]:text-xl text-2xl font-bold font-bebas" style={{ backdropFilter: 'blur(13.399999618530273px)' }}><span className="text-[#E4FF35]">Лазерная коррекция</span> зрения “Femto LASIK” — по суперцене <span className="text-[#E4FF35]">370 000 тг</span> за оба глаза только <span className="text-[#E4FF35]">до конца июля!</span></p>
+                            <p className="mx-[6%] bg-[#808080B0] text-white max-[374px]:p-3 p-4 rounded-xl border-white border-1 max-[374px]:text-xl text-2xl font-bold font-bebas" style={{ backdropFilter: 'blur(13.399999618530273px)' }}><span className="text-[#E4FF35]">Лазерная коррекция</span> зрения “Femto LASIK” — по суперцене <span className="text-[#E4FF35]">380 000 тг</span> за оба глаза только <span className="text-[#E4FF35]">до конца октября!</span></p>
 
                             <p className="text-center text-red-600 text-[22px] font-bold font-bebas bg-white w-full p-1 mt-2 shadow-[0px_2px_10px_4px_rgba(101,170,243,0.5)]">Ограничения по возрасту 18-45! Город Астана!</p>
                             <button
